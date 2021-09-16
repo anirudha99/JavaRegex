@@ -17,12 +17,14 @@ public class UserRegistration {
 		final String phonepattern = "91 [1-9][0-9]{9}";
 		//password(1)
 		final String Password = "[0-9a-zA-Z]{8}[0-9a-zA-Z]*";
+		//password(2)
+		final String PasswordOne = ".*[A-Z].*";
 		
 		String firstName = "Anirudha";
 		String lastName = "Mayya";
 		String email = "AnirudhaMayya@gmail.com";
 		String phone="91 7569862011";
-		String password = "ExamplePassword";
+		String password = "examplepassword";
 
 		if (Pattern.matches(FIRST_NAME, firstName)) { 	// use case 1 : first name
 			System.out.println("Valid first name");
@@ -48,7 +50,12 @@ public class UserRegistration {
 		else {
 			System.out.println("Invalid phone number");
 		}
-		if (Pattern.matches(Password, password)) {		// Use case 5 : password 1
+		if (Pattern.matches(Password, password)) {		// Use case 5 : password - 1 - not less than 8
+			System.out.println("Valid password");
+		} else {
+			System.out.println("Invalid password");
+		}
+		if (Pattern.matches(PasswordOne, password)) {	// Use case 6 : password - 2 - One uppercase
 			System.out.println("Valid password");
 		} else {
 			System.out.println("Invalid password");
