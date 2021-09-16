@@ -15,19 +15,22 @@ public class UserRegistration {
 		final String EMAIL = username + domain;
 		//number
 		final String phonepattern = "91 [1-9][0-9]{9}";
+		//password(1)
+		final String Password = "[0-9a-zA-Z]{8}[0-9a-zA-Z]*";
 		
 		String firstName = "Anirudha";
 		String lastName = "Mayya";
 		String email = "AnirudhaMayya@gmail.com";
 		String phone="91 7569862011";
+		String password = "ExamplePassword";
 
-		if (Pattern.matches(FIRST_NAME, firstName)) { // use case 1 : first name
+		if (Pattern.matches(FIRST_NAME, firstName)) { 	// use case 1 : first name
 			System.out.println("Valid first name");
 		} else {
 			System.out.println("Invalid");
 		}
 		
-		if (Pattern.matches(LAST_NAME, lastName)) { // use case 2 : last name
+		if (Pattern.matches(LAST_NAME, lastName)) { 	// use case 2 : last name
 			System.out.println("Valid last name");
 		} else {
 			System.out.println("Invalid last name");
@@ -39,11 +42,16 @@ public class UserRegistration {
 			System.out.println("Invalid email");
 		}
 		
-		if(Pattern.matches(phonepattern, phone)) {
+		if(Pattern.matches(phonepattern, phone)) {		//use case 4 : phone number
 			System.out.println("Valid phone number");
 		}
 		else {
 			System.out.println("Invalid phone number");
+		}
+		if (Pattern.matches(Password, password)) {		// Use case 5 : password 1
+			System.out.println("Valid password");
+		} else {
+			System.out.println("Invalid password");
 		}
 
 	}
