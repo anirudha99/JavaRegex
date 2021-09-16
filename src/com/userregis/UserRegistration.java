@@ -19,12 +19,14 @@ public class UserRegistration {
 		final String Password = "[0-9a-zA-Z]{8}[0-9a-zA-Z]*";
 		//password(2)
 		final String PasswordOne = ".*[A-Z].*";
+		//password(3)
+		final String PasswordTwo = "^(?=.*[0-9])(?=.*[A-Z]).{8,}$";
 		
 		String firstName = "Anirudha";
 		String lastName = "Mayya";
 		String email = "AnirudhaMayya@gmail.com";
 		String phone="91 7569862011";
-		String password = "examplepassword";
+		String password = "Example4Password";
 
 		if (Pattern.matches(FIRST_NAME, firstName)) { 	// use case 1 : first name
 			System.out.println("Valid first name");
@@ -60,6 +62,12 @@ public class UserRegistration {
 		} else {
 			System.out.println("Invalid password");
 		}
+		if (Pattern.matches(PasswordTwo, password)) {	// Use case 7 : password - 3 - One numeric
+			System.out.println("Valid password");
+		} else {
+			System.out.println("Invalid password");
+		}
+
 
 	}
 
