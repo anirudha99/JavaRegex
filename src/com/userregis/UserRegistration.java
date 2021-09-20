@@ -15,12 +15,8 @@ public class UserRegistration {
 		final String EMAIL = username + domain; 	//Use case 9 satisfies
 		//number
 		final String phonepattern = "91 [1-9][0-9]{9}";
-		//password(1)
-		final String Password = "[0-9a-zA-Z]{8}[0-9a-zA-Z]*";
-		//password(2)
-		final String PasswordOne = ".*[A-Z].*";
-		//password(3)
-		final String PasswordTwo = "^(?=.*[0-9])(?=.*[A-Z]).{8,}$";
+		//password all cases
+		final String Password = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[@#$%^&+=]).{8,}$";
 		
 		String firstName = "Anirudha";
 		String lastName = "Mayya";
