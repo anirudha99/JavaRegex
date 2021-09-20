@@ -48,17 +48,7 @@ public class UserRegistration {
 		else {
 			System.out.println("Invalid phone number");
 		}
-		if (Pattern.matches(Password, password)) {		// Use case 5 : password - 1 - not less than 8
-			System.out.println("Valid password");
-		} else {
-			System.out.println("Invalid password");
-		}
-		if (Pattern.matches(PasswordOne, password)) {	// Use case 6 : password - 2 - One uppercase
-			System.out.println("Valid password");
-		} else {
-			System.out.println("Invalid password");
-		}
-		if (Pattern.matches(PasswordTwo, password)) {	// Use case 7 : password - 3 - One numeric
+		if (Pattern.matches(Password, password)) {		// Use case : password all validated
 			System.out.println("Valid password");
 		} else {
 			System.out.println("Invalid password");
