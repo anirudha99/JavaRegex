@@ -12,7 +12,7 @@ public class UserRegistration {
 		//email
 		final String username = "^[A-Za-z][A-Za-z0-9+-]{2}[A-Za-z0-9+-]*([.][A-Za-z0-9]{2}[A-Za-z0-9]*)?";
 		final String domain = "\\@[a-z]{3}[a-z]*\\.[a-z]{2}[a-z]*([.][a-z]{2}[a-z]*)?";
-		final String EMAIL = username + domain;
+		final String EMAIL = username + domain; 	//Use case 9 satisfies
 		//number
 		final String phonepattern = "91 [1-9][0-9]{9}";
 		//password(1)
@@ -67,8 +67,5 @@ public class UserRegistration {
 		} else {
 			System.out.println("Invalid password");
 		}
-
-
 	}
-
 }
